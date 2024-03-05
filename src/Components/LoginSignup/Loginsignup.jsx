@@ -31,8 +31,9 @@ export const Loginsignup = () => {
                     <input type="password" placeholder='Password' />
                 </div>
             </div>
-            <div className="forgot-password">Lost Password? <span>Click Here</span></div>
-            <div className="submit-container">
+            {action === 'Login' && <div className="forgot-password">Lost Password? <span>Click Here</span></div>}
+
+                <div className="submit-container">
                 <div className={action === "Login" ? 'submit gray' : 'submit'} onClick={() => handleActionChange('Sign up')}>Sign Up</div>
                 <div className={action === 'Sign up' ? 'submit gray' : 'submit'} onClick={() => handleActionChange('Login')}>Login</div>
             </div>
