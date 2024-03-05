@@ -6,8 +6,6 @@ import password_icon from '../Assets/password.png';
 
 export const Loginsignup = () => {
     const [action, setAction] = useState('Sign up');
-
-    // Hàm này cập nhật giá trị của action khi người dùng nhấn vào nút "Login" hoặc "Sign Up"
     const handleActionChange = (newAction) => {
         setAction(newAction);
     };
@@ -19,10 +17,11 @@ export const Loginsignup = () => {
                 <div className="underline"></div>
             </div>
             <div className="inputs">
-                <div className="input">
+                {action==='Login'?<div></div>:<div className="input">
                     <img src={user_icon} alt="" />
                     <input type="text" placeholder='Name'/>
-                </div>
+                </div>}
+                
                 <div className="input">
                     <img src={email_icon} alt="" />
                     <input type="email" placeholder='Email' />
