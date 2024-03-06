@@ -1,14 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 import Loginsignup from './Components/LoginSignup/Loginsignup';
-
-function App() {
-    return ( <
-        div >
-        <
-        Loginsignup / >
-        <
-        /div>
+import Admin from './Components/Admindashboard/Admindashboard';
+import  {BrowserRouter,Routes,Route, Outlet} from 'react-router-dom';
+function App()
+ {
+    return (
+        <BrowserRouter>
+        <Routes>
+  <Route path="/" element={<Loginsignup/>}/>
+  <Route path="/admin" element={<Admin/>}/>
+</Routes> 
+        <div>
+            <Outlet></Outlet>
+        </div>
+        </BrowserRouter>
     );
 }
 

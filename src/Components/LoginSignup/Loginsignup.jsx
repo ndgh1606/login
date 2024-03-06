@@ -3,18 +3,20 @@ import './LoginSignup.css';
 import user_icon from '../Assets/person.png';
 import email_icon from '../Assets/email.png';
 import password_icon from '../Assets/password.png';
+import { Link } from 'react-router-dom'; // Import Link from React Router
 
 export const Loginsignup = () => {
     const [action, setAction] = useState('Sign up');
     const handleActionChange = (newAction) => {
         setAction(newAction);
     };
-
     return (
         <div className='container'>
             <div className='header'>
                 <div className="text">{action}</div>
                 <div className="underline"></div>
+                <Link to="/admin" className="admin-link">Admin Dashboard</Link>
+          
             </div>
             <div className="inputs">
                 {action==='Login'?<div></div>:<div className="input">
