@@ -6,7 +6,8 @@ export const Admindashboard = () => {
         <div className="sidebar">
             <h2>Admin Dashboard</h2>
             <ul>
-                <li>Create Account</li>
+                <a href='./' className='admin-link'><li>Create Account</li></a> 
+                
             </ul>
         </div>
         <div className="content"></div>
