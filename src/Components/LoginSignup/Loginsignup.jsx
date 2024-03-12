@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import './LoginSignup.css';
-import user_icon from '../Assets/person.png';
 import email_icon from '../Assets/email.png';
 import password_icon from '../Assets/password.png';
 import { Link } from 'react-router-dom'; // Import Link from React Router
 
 export const Loginsignup = () => {
-    const [action, setAction] = useState('Sign up');
-    const handleActionChange = (newAction) => {
-        setAction(newAction);
-    };
+    const [action, setAction] = useState('Login');
+
     return (
         <div className='container'>
             <div className='header'>
@@ -20,11 +17,6 @@ export const Loginsignup = () => {
                 <Link to='/contribution' className='contribution-link'>Contribution</Link>
             </div>
             <div className="inputs">
-                {action==='Login'?<div></div>:<div className="input">
-                    <img src={user_icon} alt="" />
-                    <input type="text" placeholder='Name'/>
-                </div>}
-                
                 <div className="input">
                     <img src={email_icon} alt="" />
                     <input type="email" placeholder='Email' />
@@ -35,10 +27,11 @@ export const Loginsignup = () => {
                 </div>
             </div>
             {action === 'Login' && <div className="forgot-password">Lost Password? <span>Click Here</span></div>}
+            {action === 'Login' && <div className="forgot-password">Login With Guess <span>Click Here</span></div>}
 
-                <div className="submit-container">
-                <div className={action === "Login" ? 'submit gray' : 'submit'} onClick={() => handleActionChange('Sign up')}>Sign Up</div>
-                <div className={action === 'Sign up' ? 'submit gray' : 'submit'} onClick={() => handleActionChange('Login')}>Login</div>
+            <div className="submit-container">
+                
+                <div className={action === 'Sign up' ? 'submit gray' : 'submit'} onClick={() => setAction('Login')}>Login</div>
             </div>
         </div>
     );
