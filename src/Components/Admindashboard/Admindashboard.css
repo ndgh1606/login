@@ -33,3 +33,52 @@
     text-decoration: underline;
     /* Gạch chân khi rê chuột qua */
 }
+
+.create-account-form {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    width: 300px;
+    /* Đặt chiều rộng của form */
+    margin-left: auto;
+    /* Căn lề trái và phải tự động để form nằm giữa */
+    margin-right: auto;
+}
+
+.create-account-form h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.create-account-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.create-account-form input[type="text"],
+.create-account-form input[type="password"] {
+    width: calc(100% - 20px);
+    /* Chiều rộng của input sẽ là 100% trừ đi padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.create-account-form button {
+    width: 100%;
+    /* Button sẽ có chiều rộng bằng 100% của form */
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.create-account-form button:hover {
+    background-color: #45a049;
+}
