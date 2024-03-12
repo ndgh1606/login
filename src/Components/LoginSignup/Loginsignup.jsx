@@ -17,6 +17,7 @@ export const Loginsignup = () => {
                 <div className="underline"></div>
                 <Link to="/admin" className="admin-link">Admin Dashboard</Link>
                 <Link to='/student' className='student-link'>Student Dashboard</Link>
+                <Link to='/contribution' className='contribution-link'>Contribution</Link>
             </div>
             <div className="inputs">
                 {action==='Login'?<div></div>:<div className="input">
