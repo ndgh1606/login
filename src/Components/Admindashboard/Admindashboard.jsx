@@ -73,14 +73,6 @@ export const Admindashboard = () => {
                     </div>
                 )}
             </div>
-  return (
-    <div className='admin-container'>
-        <div className="sidebar">
-            <h2>Admin Dashboard</h2>
-            <ul>
-                <a href='./' className='admin-link'><li>Create Account</li></a> 
-                
-            </ul>
         </div>
     );
 };
